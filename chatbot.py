@@ -218,7 +218,7 @@ def chat():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', choices={'train', 'chat', 'production'},
-                        default='train', help="mode. if not specified, it's in the train mode")
+                        default='production')
     args = parser.parse_args()
 
     if not os.path.isdir(config.PROCESSED_PATH):

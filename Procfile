@@ -1,1 +1,1 @@
-web: python3 chatbot.py --mode production
+web: gunicorn app:app
