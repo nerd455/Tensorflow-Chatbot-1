@@ -1,7 +1,7 @@
 <h1>Tensorflow-Chatbot-1:</h1>
 
 
-<h2>Usage:<h2>
+<h2>Usage:</h2>
 <b>$ python3 data.py</b><br>
 This will do all the pre-processing for the Cornell dataset.
 
