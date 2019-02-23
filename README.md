@@ -3,7 +3,7 @@
 
 <h2>Usage:</h2>
 <b>$ python3 data.py</b><br>
-This will do all the pre-processing for the Cornell dataset.
+This will do all the pre-processing for the Cornell dataset.<br><br>
 
 
 <b>$ python3 chatbot.py --mode [train/chat/production]</b><br>
