@@ -217,14 +217,17 @@ def chat():
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--mode', choices={'train', 'chat'},
+    parser.add_argument('--mode', choices={'train', 'chat', 'production'},
                         default='train', help="mode. if not specified, it's in the train mode")
     args = parser.parse_args()
 
-    # if not os.path.isdir(config.PROCESSED_PATH):
-    #     data.prepare_raw_data()
-    #     data.process_data()
-    print('Data ready!')
+    if not os.path.isdir(config.PROCESSED_PATH):
+        print("Started data preparation...")
+        data.prepare_raw_data()
+        data.process_data()
+        print("Completed data preparation...")
+
+    print('---Data ready---')
 
     data.make_dir(config.CPT_PATH)
 
@@ -232,6 +235,13 @@ def main():
         train()
     elif args.mode == 'chat':
         chat()
+    elif args.mode == 'production':
+        print("Training started")
+        train()
+        print("Training ended")
+        print("Chatting started")
+        chat()
+        print("Chatting ended")
 
 
 if __name__ == '__main__':

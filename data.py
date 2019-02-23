@@ -214,6 +214,7 @@ def get_batch(data_bucket, bucket_id, batch_size=1):
 
 
 if __name__ == '__main__':
+    print("Started data preparation...")
     prepare_raw_data()
     process_data()
-    print("Completed...")
+    print("Completed data preparation...")
